@@ -1,0 +1,22 @@
+includes:
+  - owners: DT-Patient
+    repos:
+      - PervasiveHealthcare
+      - buildautomationsetup
+    branches:
+      - main
+      - develop
+modules:
+  - name: RefreshVersions
+    options:
+      strategy: latest
+      versionRegex: v?\d+(\.\d+)*
+labels:
+  name: version-upgrade
+  color: ffd11a
+author:
+  name: DT-Patient Bot
+  email: ylenia.battistini@studio.unibo.it
+
+
+

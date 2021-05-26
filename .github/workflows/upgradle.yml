@@ -1,0 +1,16 @@
+name: UpGradle
+on:
+  push:
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  UpGradle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: DanySK/upgradle-action@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          configuration_file: upgradle.yml
+          version: 0.3.5
